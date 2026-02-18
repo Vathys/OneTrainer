@@ -275,6 +275,9 @@ class ModelSetupDiffusionLossMixin(metaclass=ABCMeta):
         self.__alphas_cumprod_fun = alphas_cumprod_fun
 
         if data['loss_type'] == 'target':
+            if config.differential_guidance:
+                with torch.no_grad():
+                    data['target'] = data['predicted'] + config.guidance_scale * (data['target'] - data['predicted'])
             # TODO: don't disable masked loss functions when has_conditioning_image_input is true.
             #  This breaks if only the VAE is trained, but was loaded from an inpainting checkpoint
             if config.masked_training and not config.model_type.has_conditioning_image_input():

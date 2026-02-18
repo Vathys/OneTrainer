@@ -457,6 +457,9 @@ class TrainConfig(BaseConfig):
     timestep_shift: float
     dynamic_timestep_shifting: bool
 
+    differential_guidance: bool
+    guidance_scale: float
+
     # unet
     unet: TrainModelPartConfig
 
@@ -1033,6 +1036,8 @@ class TrainConfig(BaseConfig):
         data.append(("timestep_shift", 1.0, float, False))
         data.append(("dynamic_timestep_shifting", False, bool, False))
 
+        data.append(("differential_guidance"), False, bool, False)
+        data.append(("guidance_scale", 3.0, float, False))
 
         # unet
         unet = TrainModelPartConfig.default_values()

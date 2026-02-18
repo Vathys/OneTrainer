@@ -98,7 +98,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_stable_diffusion_3_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -113,7 +114,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_stable_diffusion_xl_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -127,7 +129,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_wuerstchen_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -140,7 +143,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 0)
         self.__create_loss_frame(column_2, 1)
-        self.__create_layer_frame(column_2, 2)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_pixart_alpha_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -153,7 +157,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2, supports_vb_loss=True)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_flux_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -167,7 +172,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_flux_2_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -179,7 +185,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_chroma_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -192,7 +199,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_qwen_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -204,7 +212,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_z_image_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -216,7 +225,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_sana_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -229,7 +239,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_hunyuan_video_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -243,7 +254,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __setup_hi_dream_ui(self, column_0, column_1, column_2):
         self.__create_base_frame(column_0, 0)
@@ -259,7 +271,8 @@ class TrainingTab:
 
         self.__create_masked_frame(column_2, 1)
         self.__create_loss_frame(column_2, 2)
-        self.__create_layer_frame(column_2, 3)
+        self.__create_differential_guidance_frame(column_2, 3)
+        self.__create_layer_frame(column_2, 4)
 
     def __create_base_frame(self, master, row):
         frame = ctk.CTkFrame(master=master, corner_radius=5)
@@ -773,6 +786,21 @@ class TrainingTab:
                          tooltip="Selects the type of loss scaling to use during training. Functionally equated as: Loss * selection")
         components.options(frame, row, 1, [str(x) for x in list(LossScaler)], self.ui_state, "loss_scaler")
         row += 1
+
+    def __create_differential_guidance_frame(self, master, row):
+        frame = ctk.CTkFrame(master=master, corner_radius=5)
+        frame.grid(row=row, column=0, padx=5, pady=5, sticky="nsew")
+        frame.grid_columnconfigure(0, weight=1)
+
+
+        components.label(frame, 0, 0, "Differential Guidance",
+                         tooltip="Amplify the difference of the model prediction and the target during training to make a new target.")
+        components.entry(frame, 0, 1, self.ui_state, "differential_guidance")
+
+        components.label(frame, 1, 0, "Guidance Scale", 
+                         tooltip="Multiplier for the difference")
+        components.entry(frame, 1, 1, self.ui_state, "guidance_scale")
+
 
     def __create_layer_frame(self, master, row):
         cls = create.get_model_setup_class(self.train_config.model_type, self.train_config.training_method)
