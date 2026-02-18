@@ -795,7 +795,7 @@ class TrainingTab:
 
         components.label(frame, 0, 0, "Differential Guidance",
                          tooltip="Amplify the difference of the model prediction and the target during training to make a new target.")
-        components.entry(frame, 0, 1, self.ui_state, "differential_guidance")
+        components.switch(frame, 0, 1, self.ui_state, "differential_guidance")
 
         components.label(frame, 1, 0, "Guidance Scale", 
                          tooltip="Multiplier for the difference")
